@@ -3,8 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+
+    <link rel="stylesheet" href="~/webgl/TemplateData/style.css">
+    <script src="~/webgl/FatCatSplat/Build/UnityLoader.js"></script>
+    <script src="~/webgl/TemplateData/UnityProgress.js"></script>
+    <script>
+        var unityInstance = UnityLoader.instantiate("unityContainer", "../webgl/FatCatSplat/Build/WebBuild.json", { onProgress: UnityProgress });
+    </script>
 </head>
 <body>
-<h1>This is the Fat Cat Splat page</h1>
+<div id="instructions">
+    <p>Click the buttons to navigate through the UI. Use your Space Bar to jump!<br />
+        <br />
+        &emsp;Direct Link to GitHub Repository:   <a href=""https://github.com/hashr25/Fat-Cat-Splat/"" target=""_blank"">Fat Cat Splat</a></p>
+</div>
+<div class="bubble-container">
+    <div class="webgl-content">
+        <div id="unityContainer"></div>
+        <div class="webgl-footer">
+            <div class="webgl-logo"></div>
+            <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
+            <div class="title">Fat Cat Splat</div>
+        </div>
+    </div>
+</div>
 </body>
 </html>
