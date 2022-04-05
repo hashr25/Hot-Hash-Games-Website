@@ -14,4 +14,9 @@ public class IndexController {
     public String displayFatCatSplat(){
         return "fatCatSplat";
     }
+
+    @GetMapping("LostInADungeon")
+    public String displayLostInADungeon(){
+        return "lostInADungeon";
+    }
 }
