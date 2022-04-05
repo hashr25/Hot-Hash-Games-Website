@@ -12,6 +12,6 @@ public class IndexController {
 
     @GetMapping("FatCatSplat")
     public String displayFatCatSplat(){
-        return "FatCatSplat";
+        return "fatCatSplat";
     }
 }
