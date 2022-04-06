@@ -5,6 +5,7 @@
     <title>Lost In A Dungeon</title>
 
     <link rel="stylesheet" href="/webgl/TemplateData/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <script src="/webgl/LostInADungeon/Build/UnityLoader.js"></script>
     <script src="/webgl/TemplateData/UnityProgress.js"></script>
     <script>
@@ -12,36 +13,46 @@
     </script>
 </head>
 <body>
+    <div th:replace="fragments/header :: header"/>
 
-    <p>
-        Here are the controls:<br />
-        Click any of the buttons on the screen to change map creation algorithms.<br />
-        &emsp;Columned Room Generation - Large square room with columns throughout.<br />
-        &emsp;Drunkard's Walk (Default): Algorithm walks a random path until it has taken enough steps.<br />
-        &emsp;Binary Space Partition: Algorithm takes a set room size and splits it within a threshold until the map has rooms that are not too large.<br />
-        <br />
-        Controls:<br />
-        &emsp;Movement        -   Standard arrow keys or WASD<br />
-        &emsp;Toggle Mini-Map -   M<br />
-        &emsp;Toggle Full-Map -   F<br />
-        &emsp;Zoom Map In     -   -<br />
-        &emsp;Zoom Map Out    -   =<br />
-        &emsp;Crouch          -   C<br />
-        &emsp;Walk            -   Left Shift<br />
-        &emsp;Jump            -   Space Bar<br />
-        <br />
-        &emsp;Direct Link to GitHub Repository:   <a href=""https://github.com/hashr25/Lost-In-A-Dungeon/"" target=""_blank"">Lost In A Dungeon</a>
-    </p>
+    <div class="container">
 
-    <div class="bubble-container">
-        <div class="webgl-content">
-            <div id="unityContainer"></div>
-            <div class="webgl-footer">
-                <div class="webgl-logo"></div>
-                <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
-                <div class="title">Lost In A Dungeon</div>
+
+        <p>
+            Here are the controls:<br />
+            Click any of the buttons on the screen to change map creation algorithms.<br />
+            &emsp;Columned Room Generation - Large square room with columns throughout.<br />
+            &emsp;Drunkard's Walk (Default): Algorithm walks a random path until it has taken enough steps.<br />
+            &emsp;Binary Space Partition: Algorithm takes a set room size and splits it within a threshold until the map has rooms that are not too large.<br />
+            <br />
+            Controls:<br />
+            &emsp;Movement        -   Standard arrow keys or WASD<br />
+            &emsp;Toggle Mini-Map -   M<br />
+            &emsp;Toggle Full-Map -   F<br />
+            &emsp;Zoom Map In     -   -<br />
+            &emsp;Zoom Map Out    -   =<br />
+            &emsp;Crouch          -   C<br />
+            &emsp;Walk            -   Left Shift<br />
+            &emsp;Jump            -   Space Bar<br />
+            <br />
+            &emsp;Direct Link to GitHub Repository:   <a href="https://github.com/hashr25/Lost-In-A-Dungeon/" target="_blank">Lost In A Dungeon</a>
+        </p>
+
+        <div class="bubble-container">
+            <div class="webgl-content">
+                <div id="unityContainer"></div>
+                <div class="webgl-footer">
+                    <div class="webgl-logo"></div>
+                    <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
+                    <div class="title">Lost In A Dungeon</div>
+                </div>
             </div>
         </div>
     </div>
+
+    <div th:replace="fragments/footer :: footer"/>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
 </body>
 </html>

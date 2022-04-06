@@ -19,4 +19,14 @@ public class IndexController {
     public String displayLostInADungeon(){
         return "lostInADungeon";
     }
+
+    @GetMapping("RollerBall")
+    public String displayRollerBall(){
+        return "rollerBall";
+    }
+
+    @GetMapping("test")
+    public String displayTestFatCat(){
+        return "";
+    }
 }
